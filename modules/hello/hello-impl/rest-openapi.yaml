@@ -1,0 +1,66 @@
+openapi: 3.0.1
+servers:
+  # Added by API Auto Mocking Plugin
+  - description: SwaggerHub API Auto Mocking
+    url: https://virtserver.swaggerhub.com/fabian-bouche-liferay/SampleRest/1.0.0
+info:
+    description:
+        "Hello REST API. A Java client JAR is available for use with the group ID 'com.liferay', artifact ID
+        'com.liferay.samples.fbo.hello.client', and version '1.0.0'."
+    license:
+        name: "Apache 2.0"
+        url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+    title: "Hello"
+    version: 1.0.0
+paths:
+  /greet:
+    get:
+      summary: Greet someone
+      description: Pass the name of the person to greet
+      parameters:
+        - in: query
+          name: person
+          description: pass the name of the person
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: search results matching criteria
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Greeting'
+            application/xml:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Greeting'
+        '400':
+          description: bad input parameter
+        '402':
+          description: you need to pay to be able to greet that person
+        '403':
+          description: greeting that person is forbidden
+        '404':
+          description: that person has not been found
+        '410':
+          description: that person is gone, you cannot greet them
+        '413':
+          description: the name of that person is too long
+components:
+  schemas:
+    Greeting:
+      type: object
+      required:
+        - person
+        - message
+      properties:
+        person:
+          type: string
+          example: 'John Doe'
+        message:
+          type: string
+          example: 'Hello John Doe!'

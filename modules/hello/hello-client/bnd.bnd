@@ -1,0 +1,3 @@
+Bundle-Name: hello-client
+Bundle-SymbolicName: hello.client
+Bundle-Version: 1.0.0

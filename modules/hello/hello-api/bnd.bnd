@@ -1,0 +1,6 @@
+Bundle-Name: hello-api
+Bundle-SymbolicName: hello.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.liferay.samples.fbo.hello.dto.v1_0_0,\
+	com.liferay.samples.fbo.hello.resource.v1_0_0

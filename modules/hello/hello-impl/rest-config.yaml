@@ -1,0 +1,9 @@
+apiDir: "../hello-api/src/main/java"
+apiPackagePath: "com.liferay.samples.fbo.hello"
+application:
+    baseURI: "/hello"
+    className: "HelloApplication"
+    name: "Hello"
+author: "Fabian-Liferay"
+clientDir: "../hello-client/src/main/java"
+testDir: "../hello-test/src/testIntegration/java"

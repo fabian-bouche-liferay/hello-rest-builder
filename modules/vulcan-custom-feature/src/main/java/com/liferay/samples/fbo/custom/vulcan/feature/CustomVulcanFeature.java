@@ -9,9 +9,9 @@ import org.osgi.service.jaxrs.whiteboard.JaxrsWhiteboardConstants;
 
 @Component(
 		property = {
-			JaxrsWhiteboardConstants.JAX_RS_APPLICATION_SELECT + "=(osgi.jaxrs.extension.select=\\(osgi.jaxrs.name=Liferay.Vulcan\\))",
+			JaxrsWhiteboardConstants.JAX_RS_APPLICATION_SELECT + "=(osgi.jaxrs.application.base=/hello)",
 			JaxrsWhiteboardConstants.JAX_RS_EXTENSION + "=true",
-			JaxrsWhiteboardConstants.JAX_RS_NAME + "=Liferay.Vulcan.Custom"
+			JaxrsWhiteboardConstants.JAX_RS_NAME + "=Hello.Custom.Feature"
 		},
 		scope = ServiceScope.PROTOTYPE, service = Feature.class
 	)
@@ -21,8 +21,9 @@ public class CustomVulcanFeature implements Feature {
 	public boolean configure(FeatureContext context) {
 
 		context.register(CustomWebApplicationExceptionMapper.class, 1000);
-
+		
 		return true;
+		
 	}
 	
 }

@@ -1,4 +1,3 @@
 Bundle-Name: vulcan-custom-feature
 Bundle-SymbolicName: com.liferay.samples.fbo.custom.vulcan.feature
 Bundle-Version: 1.0.0
-Export-Package: com.liferay.samples.fbo.custom.vulcan.feature.api
